@@ -3,20 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <title>正気倶楽部ホームページ</title>
+    <style>
+        body {
+            font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Meiryo", sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        /* 作品リストのスタイル */
+        .work-list {
+            list-style: none;
+            padding: 0;
+        }
+        .work-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+            border-bottom: 1px dotted #ccc;
+            padding-bottom: 20px;
+        }
+        /* 画像の設定 */
+        .work-item img {
+            width: 200px; /* 画像の横幅 */
+            height: auto;
+            margin-right: 20px;
+            border: 1px solid #000;
+        }
+        /* 説明文の設定 */
+        .work-info h3 {
+            margin: 0 0 10px 0;
+            font-size: 1.2em;
+        }
+        /* スマホで見るときは縦並びにする */
+        @media (max-width: 600px) {
+            .work-item {
+                flex-direction: column;
+            }
+            .work-item img {
+                margin-bottom: 15px;
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 <body bgcolor="#FFFFFF" text="#000000">
 
     <h1>作品の紹介</h1>
     <hr>
 
-     <ul>
-     （編集中）
+    <div class="work-list">
+        <div class="work-item">
+            <img src="shiniku.png" alt="作品1">
+            <div class="work-info">
+                <h3>作品タイトル 01</h3>
+                <p>ここに作品の説明文を記載します。制作意図や、こだわったポイントなどを自由に書いてください。</p>
+            </div>
+        </div>
 
+        <div class="work-item">
+            <img src="kinyuu.png" alt="作品2">
+            <div class="work-info">
+                <h3>作品タイトル 02</h3>
+                <p>2つ目の説明文です。このように同じブロックをコピーして増やすことができます。</p>
+            </div>
+        </div>
 
-     </ul>
-                
+        </div>
 
-
+    <p><a href="index.html">トップページへ戻る</a></p>
 
 </body>
 </html>
