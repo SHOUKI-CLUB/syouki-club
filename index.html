@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>正気倶楽部ホームページ</title>
+    <style>
+        /* 1. サイト全体のフォント設定（角ゴシック） */
+        body {
+            margin: 20px;
+            background-color: #FFFFFF;
+            /* モダンな角ゴシック体。メイリオ、游ゴシック等を優先。 */
+            font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Meiryo", "sans-serif";
+            color: #000000;
+            line-height: 1.6;
+        }
+
+        /* 2. 背景に「正気」を固定する設定（角ゴシック版） */
+        body::before {
+            content: "正気";
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+            
+            font-size: 60vw;
+            font-weight: 900; /* 角ゴシックなので極太で力強く */
+            white-space: nowrap;
+            
+            /* 背景も角ゴシックに統一 */
+            font-family: "Arial Black", "Hiragino Sans", "Meiryo", sans-serif;
+            
+            background: linear-gradient(
+                to right, 
+                #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #9400d3
+            );
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            
+            opacity: 0.08; /* 角ゴシックは面積が広いため、少し薄め(0.08)にして圧迫感を軽減 */
+            pointer-events: none;
+        }
+
+        /* 3. メニューの間隔設定 */
+        .menu-link {
+            display: block;
+            margin-bottom: 12px; /* ゴシック体に合わせて標準的な間隔に調整 */
+            text-decoration: none;
+            font-size: 1.05em;
+            font-weight: bold;
+        }
+        .menu-link:hover {
+            text-decoration: underline;
+            color: #ff0000;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+        
+        a {
+            color: #0000EE;
+        }
+
+        /* 見出しを力強いゴシックに */
+        h1, h2 {
+            font-weight: bold;
+            display: inline-block;
+            padding-bottom: 3px;
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+
+    <h1>正気倶楽部ホームページ</h1>
+    <hr>
+
+    <table border="0" cellpadding="10" width="100%">
+        <tr>
+            <td valign="top" width="220">
+                <b>【 メニュー 】</b><br><br>
+                <a href="01profile.html" class="menu-link">・プロフィール</a>
+                <a href="02shoukai.html" class="menu-link">・作品の紹介</a>
+                <a href="03rinku.html" class="menu-link">・各種リンク</a>
+                <a href="04sutanpu.html" class="menu-link">・ＬＩＮＥスタンプ</a>
+                <a href="05chosakuken.html" class="menu-link">・著作権放棄について</a>
+            </td>
+
+            <td valign="top">
+                <h2>最新情報</h2>
+                <ul>
+                    <li>2026年 3月8日：ホームページを公開しました。</li>
+                </ul>
+
+            </td>
+        </tr>
+    </table>
+
+    <hr>
+    <address>御問合せ：編集中@mail.com</address>
+
+</body>
+</html>
